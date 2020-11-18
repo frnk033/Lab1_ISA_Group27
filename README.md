@@ -1,4 +1,4 @@
 # Lab1_ISA_Group27
-The repo contains only sources, scripts and results.
+This is the delivery repository of  group 27 for LAB1.
 
 
