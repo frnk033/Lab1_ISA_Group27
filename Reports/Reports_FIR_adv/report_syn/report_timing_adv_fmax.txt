@@ -1,0 +1,81 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'myfir_adv' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : myfir_adv
+Version: O-2018.06-SP4
+Date   : Sat Nov 14 11:52:55 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: x2_regs_pipe2i_10/Dout_reg[3]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: pipe_reg1_8/Dout_reg[11]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  myfir_adv          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  x2_regs_pipe2i_10/Dout_reg[3]/CK (DFFR_X1)              0.00 #     0.00 r
+  x2_regs_pipe2i_10/Dout_reg[3]/QN (DFFR_X1)              0.07       0.07 f
+  x2_regs_pipe2i_10/U4/ZN (INV_X2)                        0.06       0.13 r
+  x2_regs_pipe2i_10/Dout[3] (reg_data_size8_4)            0.00       0.13 r
+  mult_205/a[3] (myfir_adv_DW_mult_tc_6)                  0.00       0.13 r
+  mult_205/U272/ZN (INV_X1)                               0.05       0.18 f
+  mult_205/U288/Z (XOR2_X1)                               0.08       0.26 f
+  mult_205/U285/ZN (OAI22_X1)                             0.07       0.33 r
+  mult_205/U33/S (FA_X1)                                  0.12       0.45 f
+  mult_205/U32/S (FA_X1)                                  0.11       0.56 f
+  mult_205/U239/ZN (INV_X1)                               0.04       0.60 r
+  mult_205/U180/ZN (OAI222_X1)                            0.06       0.66 f
+  mult_205/U268/ZN (NAND2_X1)                             0.04       0.70 r
+  mult_205/U181/ZN (NAND3_X1)                             0.04       0.74 f
+  mult_205/U186/ZN (NAND2_X1)                             0.03       0.77 r
+  mult_205/U189/ZN (NAND3_X1)                             0.03       0.80 f
+  mult_205/U7/CO (FA_X1)                                  0.10       0.90 f
+  mult_205/U215/ZN (NAND2_X1)                             0.04       0.93 r
+  mult_205/U211/ZN (NAND3_X1)                             0.04       0.97 f
+  mult_205/U221/ZN (NAND2_X1)                             0.04       1.01 r
+  mult_205/U218/ZN (NAND3_X1)                             0.04       1.05 f
+  mult_205/U227/ZN (NAND2_X1)                             0.04       1.08 r
+  mult_205/U191/ZN (NAND3_X1)                             0.04       1.12 f
+  mult_205/U258/ZN (NAND2_X1)                             0.03       1.15 r
+  mult_205/U260/ZN (NAND3_X1)                             0.04       1.19 f
+  mult_205/U264/ZN (NAND2_X1)                             0.03       1.23 r
+  mult_205/U236/ZN (AND3_X2)                              0.06       1.29 r
+  mult_205/product[15] (myfir_adv_DW_mult_tc_6)           0.00       1.29 r
+  pipe_reg1_8/Din[11] (reg_data_size12_27)                0.00       1.29 r
+  pipe_reg1_8/U31/ZN (NAND2_X1)                           0.03       1.32 f
+  pipe_reg1_8/U8/ZN (NAND2_X1)                            0.03       1.35 r
+  pipe_reg1_8/Dout_reg[11]/D (DFFR_X1)                    0.01       1.36 r
+  data arrival time                                                  1.36
+
+  clock MY_CLK (rise edge)                                1.46       1.46
+  clock network delay (ideal)                             0.00       1.46
+  clock uncertainty                                      -0.07       1.39
+  pipe_reg1_8/Dout_reg[11]/CK (DFFR_X1)                   0.00       1.39 r
+  library setup time                                     -0.03       1.36
+  data required time                                                 1.36
+  --------------------------------------------------------------------------
+  data required time                                                 1.36
+  data arrival time                                                 -1.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
